@@ -20,13 +20,6 @@ while True:
     #################################
 
     ######## WEB APP PROCESSING #####
-
-    price = fruit_price(fruit_status)
-
-    # create server
-
-    # helper functions
-
     def fruit_price(status):
         match status:
             case 1:
@@ -39,12 +32,16 @@ while True:
                 return 0.75
             case _:
                 return "Something's wrong with the internet"
+    price = fruit_price(fruit_status)
+
+    # create server
+
     ##################################
 
     cv2.imshow(rpiName, frame)
-    key = cv2.waitKey(1)
+    key = cv2.waitKey(1) & 0xFF
 
-    if key == ord("q"):
+    if key == ord('q'):
         break
 
 # cleanup
