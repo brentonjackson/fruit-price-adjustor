@@ -7,8 +7,7 @@
 # argparse to process server ip address via command line
 # socket to get pi hostname
 # time to delay camera feed
-# from imutils.video import VideoStream
-import cv2
+from imutils.video import VideoStream
 import imagezmq
 import argparse
 import socket
@@ -27,14 +26,13 @@ sender = imagezmq.ImageSender(
 # get hostname, initialize video stream, and allow
 # camera sensor to warmup
 rpiName = socket.gethostname()
-# vs = VideoStream(src=0).start()
-vs = cv2.VideoCapture(0)
+vs = VideoStream(src=-1).start()
 delay = 5  # send frames every 5 seconds to reduce load
 time.sleep(2.0)
 
 while True:
     # read frame from camera and send to server
-    ret, frame = vs.read()
+    frame = vs.read()
     # frame = imutils.resize(frame, width=320)
     sender.send_image(rpiName, frame)
     time.sleep(delay)
