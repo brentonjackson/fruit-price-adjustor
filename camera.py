@@ -1,7 +1,7 @@
 import cv2
 import time
 
-vid = cv2.VideoCapture(1)
+vid = cv2.VideoCapture(0)
 prev_time = time.time()
 delay = 5
 
