@@ -63,9 +63,6 @@ while True:
     f.write(str(price))
     f.close()
 
-    # save image to file
-    cv2.imwrite("currentFrame.jpg", frame)
-
     cv2.imshow(rpiName, frame)
 
     ##################################
