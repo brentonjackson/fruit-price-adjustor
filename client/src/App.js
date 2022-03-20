@@ -7,13 +7,13 @@ import Home from "./components/Home/Home";
 const App = () => {
   return (
     <BrowserRouter>
-      <Container maxWidth="xl">
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={() => <Redirect to="/price" />} />
-          <Route path="/price" exact component={Home} />
-        </Switch>
-      </Container>
+      {/* <Container maxWidth="xl"> */}
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={() => <Redirect to="/price" />} />
+        <Route path="/price" exact component={Home} />
+      </Switch>
+      {/* </Container> */}
     </BrowserRouter>
   );
 };
