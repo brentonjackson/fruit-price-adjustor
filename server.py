@@ -4,9 +4,22 @@
 import cv2
 import imagezmq
 import random
+import tensorflow as tf
+from PIL import Image, ImageOps
+import numpy as np
 
 imageHub = imagezmq.ImageHub()
 # initialize neural network stuff #
+def predict_stage(image_data,model):
+    size = (224, 224)
+    image = ImageOps.fit(image_data,size, Image.ANTIALIAS)
+    image_array = np.array(image)
+    normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    data[0] = normalized_image_array
+    preds = ""
+    prediction = model.predict(data)
+    return prediction
 
 ###################################
 
@@ -33,6 +46,13 @@ while True:
 
     ########### PROCESS FRAME #######
     fruit_status = 1
+
+    image = Image.fromarray(frame)
+    #st.image(image, use_column_width=True)
+    model = tf.keras.models.load_model('ripeness.h5')
+    prediction = predict_stage(image, model)
+    prob = prediction[0][1]
+    print('THE PREDICTION IS ' + str(prob))
 
     #################################
 
