@@ -7,10 +7,25 @@ import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 import random
+import tensorflow as tf
+from PIL import Image, ImageOps
+import numpy as np
 
 imageHub = imagezmq.ImageHub()
 
 # initialize neural network stuff #
+
+
+def predict_stage(image_data, model):
+    size = (224, 224)
+    image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+    image_array = np.array(image)
+    normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    data[0] = normalized_image_array
+    preds = ""
+    prediction = model.predict(data)
+    return prediction
 
 
 def predict_stage(image_data, model):
@@ -57,11 +72,13 @@ while True:
     ########### PROCESS FRAME #######
     fruit_status = 1
 
-    image = frame
+    image = Image.fromarray(frame)
     #st.image(image, use_column_width=True)
     model = tf.keras.models.load_model('ripeness.h5')
     prediction = predict_stage(image, model)
-    print('THE PREDICTION IS ' + prediction[0][1])
+    prob = prediction[0][1]
+    print('THE PREDICTION IS ' + str(prob))
+
     #################################
 
     ######## WEB APP PROCESSING #####
