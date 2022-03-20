@@ -11,8 +11,8 @@ const App = () => {
       <Container maxWidth="xl">
         <Navbar />
         <Switch>
-          <Route path="/" exact component={() => <Redirect to="/posts" />} />
-          <Route path="/posts" exact component={Home} />
+          <Route path="/" exact component={() => <Redirect to="/price" />} />
+          <Route path="/price" exact component={Home} />
         </Switch>
       </Container>
     </BrowserRouter>

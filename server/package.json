@@ -5,12 +5,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "server": "python3 server.py",
+    "webserver": "npm start",
+    "webclient": "cd ../client && npm start",
+    "start": "node index.js",
+    "dev": "concurrently \"npm run server\" \"npm run webserver\" \"npm run webclient\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1"
   },
