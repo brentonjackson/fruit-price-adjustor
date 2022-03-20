@@ -10,9 +10,11 @@ import numpy as np
 
 imageHub = imagezmq.ImageHub()
 # initialize neural network stuff #
-def predict_stage(image_data,model):
+
+
+def predict_stage(image_data, model):
     size = (224, 224)
-    image = ImageOps.fit(image_data,size, Image.ANTIALIAS)
+    image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
     image_array = np.array(image)
     normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
@@ -38,7 +40,6 @@ def fruit_price(status):
             return "Something's wrong with the internet"
 
 
-count = 0
 while True:
     # receive frame and acknowledge receipt
     rpiName, frame = imageHub.recv_image()
