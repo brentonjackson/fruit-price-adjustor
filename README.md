@@ -1,4 +1,4 @@
-![pic](https://badgen.net/github/status/brentonjackson/fruit-price-adjustor/main)
+<!-- ![pic](https://badgen.net/github/status/brentonjackson/fruit-price-adjustor/main) -->
 ![pic](https://badgen.net/github/last-commit/brentonjackson/fruit-price-adjustor/main)
 ![pic](https://badgen.net/badge/license/MIT/blue)
 <!-- ![pic](https://badgen.net/github/contributors/brentonjackson/fruit-price-adjustor) -->
