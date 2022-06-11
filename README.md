@@ -6,9 +6,8 @@
 
 Fruit-Price-Adjustor is an IOT app that monitors fruit in stores and adjusts the price of the fruit real-time based on its ripeness. This is an effort to reduce the amount of food waste as well as maximize profits. It is implemented with a camera and machine learning, paired with a full-stack web app and sms messaging.
 
----
 
-# Table Of Contents
+## Table Of Contents
 
 - [Fruit-Price-Adjustor](#fruit-price-adjustor)
 - [Table Of Contents](#table-of-contents)
@@ -19,7 +18,6 @@ Fruit-Price-Adjustor is an IOT app that monitors fruit in stores and adjusts the
     - [sms service (optional)](#sms-service-optional)
   - [Credits](#credits)
 
----
 
 ## Technology Used
 
@@ -29,7 +27,6 @@ Fruit-Price-Adjustor is an IOT app that monitors fruit in stores and adjusts the
 - Web App: **MERN Stack**
 - SMS Messaging: **Twilio**
 
----
 
 ## Installation
 
@@ -54,11 +51,10 @@ The main functionality is all in **Python**. The web app portion is in **Node**.
    1. To do this, install ngrok.
    2. Then run the command `ngrok http 5000` in the **/server** folder. Take that http forwarding address and add it to your twilio handler.
 
----
 
 ## Credits
 
 Fruit-Price-Adjustor was written by Brenton Jackson and Md Reazul Islam.
 Thanks to the HackGSU organizors, mentors, and sponsors!
 
-\*If there is anything unclear or could be better worded, please make an issue!
+\*If there is anything unclear or could be better worded, we welcome all forms of feedback
