@@ -10,7 +10,7 @@ Fruit-Price-Adjustor is an IOT app that monitors fruit in stores and adjusts the
 ## Table Of Contents
 
 - [Fruit-Price-Adjustor](#fruit-price-adjustor)
-- [Table Of Contents](#table-of-contents)
+  - [Table Of Contents](#table-of-contents)
   - [Technology Used](#technology-used)
   - [Installation](#installation)
       - [Pre-work](#pre-work)
