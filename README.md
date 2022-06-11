@@ -1,3 +1,9 @@
+![pic](https://badgen.net/github/status/brentonjackson/fruit-price-adjustor/main)
+![pic](https://badgen.net/github/last-commit/brentonjackson/fruit-price-adjustor/main)
+![pic](https://badgen.net/badge/license/MIT/blue)
+<!-- ![pic](https://badgen.net/github/contributors/brentonjackson/fruit-price-adjustor) -->
+
+
 # Fruit-Price-Adjustor
 
 [![pic](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/challenge_photos/001/837/695/datas/full_width.png)](https://hackgsu-2022.devpost.com/)
@@ -58,3 +64,6 @@ Fruit-Price-Adjustor was written by Brenton Jackson and Md Reazul Islam.
 Thanks to the HackGSU organizors, mentors, and sponsors!
 
 \*If there is anything unclear or could be better worded, we welcome all forms of feedback
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
