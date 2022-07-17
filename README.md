@@ -60,10 +60,7 @@ The main functionality is all in **Python**. The web app portion is in **Node**.
 
 ## Credits
 
-Fruit-Price-Adjustor was written by Brenton Jackson and Md Reazul Islam.
+Fruit-Price-Adjustor was created by **Brenton Jackson** and **Md Reazul Islam**.
 Thanks to the HackGSU organizors, mentors, and sponsors!
 
 \*If there is anything unclear or could be better worded, we welcome all forms of feedback
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-
